@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlproject"
+version = "0.0.1"
+description = "Student performance ML project"
+authors = [{ name = "Osama", email = "osama.baakeem2@gmail.com" }]
+requires-python = ">=3.8"
+readme = "README.md"  # remove this line if you don't have a README.md
+
+# Runtime dependencies (what used to be in requirements.txt)
+dependencies = [
+  "pandas",
+  "numpy",
+  "seaborn"
+]
+
+# Package discovery (assumes your package directory is ./mlproject with __init__.py)
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mlproject*"]
