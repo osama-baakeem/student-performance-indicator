@@ -14,7 +14,7 @@ os.makedirs(logs_dir, exist_ok=True)
 # Full path for the log file
 LOG_FILE_PATH = os.path.join(logs_dir, LOG_FILE)
 
-# Configure logging
+# Configure logging, is like a smarter version of print(), used to record and keep track of what the program is doing, and what's happenimg during the program excution 
 logging.basicConfig(
     filename=LOG_FILE_PATH,  # Log messages will be written here
     format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",  

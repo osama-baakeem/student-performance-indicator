@@ -1,5 +1,5 @@
 import sys
-from logger import logging
+from src.logger import logging
 
 
 # Function to create a detailed error message with file name, line number, and the actual error message
