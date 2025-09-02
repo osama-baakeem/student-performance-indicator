@@ -1,5 +1,5 @@
 import sys
-import logging
+from logger import logging
 
 
 # Function to create a detailed error message with file name, line number, and the actual error message
@@ -22,7 +22,6 @@ def error_message_detail(error, error_detail: sys):
     )
 
     return error_message
-
 
 # Custom Exception class for better error reporting
 class CustomException(Exception):
