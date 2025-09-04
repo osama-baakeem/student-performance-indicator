@@ -14,13 +14,11 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 # Import custom modules for data transformation and model training
-#from src.components.data_transformation import DataTransformation, DataTransformationConfig
+from src.components.data_transformation import DataTransformation, DataTransformationConfig
 #from src.components.model_trainer import ModelTrainerConfig, ModelTrainer
 
-# =========================
-# Configuration for Data Ingestion
-# =========================
 
+# Configuration for Data Ingestion
 @dataclass
 class DataIngestionConfig:
     """
@@ -33,9 +31,8 @@ class DataIngestionConfig:
 
 
 
-# =========================
+
 # Data Ingestion Class
-# =========================
 class DataIngestion:
     """
     Handles reading raw data, splitting into train/test, and saving CSVs.
@@ -80,15 +77,15 @@ class DataIngestion:
             # Raise custom exception in case of error
             raise CustomException(e, sys)
 
-# =========================
+
 # Main Execution
-# =========================
 if __name__ == "__main__":
     # Step 1: Data Ingestion
     obj = DataIngestion()
     train_data, test_data = obj.initiate_data_ingestion()
 
-
+    data_transformation=DataTransformation()
+    train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
 
 
 
