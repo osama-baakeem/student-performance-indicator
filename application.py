@@ -63,4 +63,4 @@ def predict_datapoint():
 # Run Flask Application
 if __name__=="__main__":
     # Run app on all network interfaces with debugging enabled
-    app.run(host="0.0.0.0", debug=True)  
+    app.run(host="0.0.0.0")  
