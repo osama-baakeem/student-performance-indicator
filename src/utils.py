@@ -125,9 +125,9 @@ def load_object(file_path):
         If there is an error during the loading process.
     """
     try:
-        # Open the file in binary read mode and deserialize the object with pickle
+        # Open the file in binary read mode and deserialize the object with dill
         with open(file_path, "rb") as file_obj:
-            return pickle.load(file_obj)
+            return dill.load(file_obj)
 
     except Exception as e:
         # Wrap and raise the exception as a CustomException
